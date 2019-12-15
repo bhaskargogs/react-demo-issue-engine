@@ -1,9 +1,11 @@
 import React from 'react';
-import IssuePage from './IssuePage/IssuePage';
+import { withRouter } from 'react-router-dom';
+import issues from '../Issues/issues';
 
-export class Searchbar extends React.Component {
+
+class Searchbar extends React.Component {
     state = {
-        initialIssues: [],
+        initialIssues: issues,
         issues: []
     };
 
@@ -15,12 +17,10 @@ export class Searchbar extends React.Component {
         this.setState({ issues: issues });
     }
 
-    componentWillMount = () => {
-        this.setState({
-            initialIssues: this.props.content
-        })
+    handleClick = (issue) => {
+        const { history } = this.props;
+        history.push(`/issues/${issue.id}`);
     }
-
 
     render() {
         return (
@@ -31,10 +31,11 @@ export class Searchbar extends React.Component {
                     <input type="text" onChange={this.filterList} />
                 </form>
                 {this.state.issues.map((issue) => (
-                        <IssuePage key={issue.title} description={issue.description} title={issue.title} />
-                    ))}
+                    <div key={issue.id} onClick={() => this.handleClick(issue)}>{issue.title}</div>
+                ))}
             </div>
         )
     }
 }
 
+export default withRouter(Searchbar);
