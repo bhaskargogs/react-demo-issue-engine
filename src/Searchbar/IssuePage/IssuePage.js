@@ -1,6 +1,7 @@
 import React from 'react';
 import issues from '../../Issues/issues';
-import { Container, Media } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { Container, Media, Button } from 'react-bootstrap';
 import './IssuePage.scss';
 
 export const IssuePage = ({ match }) => {
@@ -14,10 +15,7 @@ export const IssuePage = ({ match }) => {
                     <Media as="li" className="description-text" key={index}>{description.replace(/ /g, "\u00a0")}</Media>
                 ))}
             </ul>
-            {/* {issue.description.map((item) => {
-                    
-                    return [<Media as="li" className="description-text" key={itemm}>{item}</Media>, ' '];
-                })}</ul> */}
+            <Link to="/"><Button className="back-link">Go Back</Button></Link> 
         </Container>
     );
 }
