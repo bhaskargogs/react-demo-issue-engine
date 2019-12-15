@@ -16,8 +16,7 @@ export class Search extends React.Component {
 
     componentWillMount = () => {
         this.setState({
-            initialIssues: this.props.content,
-            issues: this.props.content   
+            initialIssues: this.props.content 
         })
     }
     
