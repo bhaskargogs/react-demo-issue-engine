@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Search } from './Search/Search';
 
 function App() {
+  const issues = [
+    'Issue#1: Database Connectivity Feature',
+    'Issue#2: RestAPI call made and could\'t fetch data',
+    'Issue#3: Database servers are down'
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Search content={issues} />
     </div>
   );
 }
