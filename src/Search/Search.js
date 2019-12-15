@@ -9,14 +9,14 @@ export class Search extends React.Component {
     filterList = (event) => {
         let issues = this.state.initialIssues;
         issues = issues.filter((issue) => {
-            return issue.toLowerCase().search(event.target.value.toLowerCase()) !== -1;
+            return issue.title.toLowerCase().search(event.target.value.toLowerCase()) !== -1;
         });
         this.setState({ issues: issues });
     }
 
     componentWillMount = () => {
         this.setState({
-            initialIssues: this.props.content 
+            initialIssues: this.props.content
         })
     }
     
@@ -32,7 +32,7 @@ export class Search extends React.Component {
                 <div>
                 {
                     this.state.issues.map((issue) => {
-                    return <div key={issue}> {issue}</div>
+                    return <div key={issue.title}> {issue.title}</div>
                     })
                 }
                 </div>
