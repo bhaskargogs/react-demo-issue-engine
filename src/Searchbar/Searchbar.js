@@ -32,7 +32,7 @@ class Searchbar extends React.Component {
         return (
             <Container>
                 <h1>React Demo</h1>
-                <h2>Start typing to search issues</h2>
+                <h2>Start typing to search Issues!</h2>
                 <form>
                     <input type="text" onChange={(event) => this.filterList(event.target.value)} />
                 </form>
