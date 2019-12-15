@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import { Search } from './Search/Search';
 import issues from './Issues/issues';
+import { Searchbar } from './Searchbar/Searchbar';
 
 function App() {
   return (
     <div className="App">
-      <Search content={issues} />
+      <Searchbar content={issues} />
     </div>
   );
 }

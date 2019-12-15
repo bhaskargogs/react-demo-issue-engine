@@ -1,6 +1,7 @@
 import React from 'react';
+import IssuePage from './IssuePage/IssuePage';
 
-export class Search extends React.Component {
+export class Searchbar extends React.Component {
     state = {
         initialIssues: [],
         issues: []
@@ -19,7 +20,7 @@ export class Search extends React.Component {
             initialIssues: this.props.content
         })
     }
-    
+
 
     render() {
         return (
@@ -29,13 +30,9 @@ export class Search extends React.Component {
                 <form>
                     <input type="text" onChange={this.filterList} />
                 </form>
-                <div>
-                {
-                    this.state.issues.map((issue) => {
-                    return <div key={issue.title}> {issue.title}</div>
-                    })
-                }
-                </div>
+                {this.state.issues.map((issue) => (
+                        <IssuePage key={issue.title} description={issue.description} title={issue.title} />
+                    ))}
             </div>
         )
     }
