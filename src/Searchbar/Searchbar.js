@@ -34,7 +34,7 @@ class Searchbar extends React.Component {
                 <h1>React Demo</h1>
                 <h2>Start typing to search Issues!</h2>
                 <form>
-                    <input type="text" onChange={(event) => this.filterList(event.target.value)} />
+                    <input type="text" id="issue-search" onChange={(event) => this.filterList(event.target.value)} />
                 </form>
                 {this.state.issues.map((issue) => (
                     <ListGroup key={issue.id}>
