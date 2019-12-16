@@ -23,3 +23,9 @@ The project contains 5 demo issues with description. When you search for an issu
 * react-bootstrap & node-sass
   * For styling components
 
+## Screenshots
+Screenshots of the app can be found under `media/screenshots`
+
+## Accessibility test
+Screenshots of accessibility tests are under `accessibility_tests`
+

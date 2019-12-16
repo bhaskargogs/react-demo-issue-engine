@@ -12,15 +12,15 @@ class Searchbar extends React.Component {
 
     filterList = (value) => {
         let issues = this.state.initialIssues;
-        if(value === ''){
-            this.setState({ issues: []});
+        if (value === '') {
+            this.setState({ issues: [] });
         } else {
             issues = issues.filter((issue) => {
                 return issue.title.toLowerCase().search(value.toLowerCase()) !== -1;
             });
             this.setState({ issues: issues });
         }
-        
+
     }
 
     handleClick = (issue) => {
@@ -34,7 +34,8 @@ class Searchbar extends React.Component {
                 <h1>React Demo</h1>
                 <h2>Start typing to search Issues!</h2>
                 <form>
-                    <input type="text" id="issue-search" onChange={(event) => this.filterList(event.target.value)} />
+                    <label for="issue-search" className="sr-only">Issues</label>
+                    <input type="text" addLabel={false} id="issue-search" onChange={(event) => this.filterList(event.target.value)} />
                 </form>
                 {this.state.issues.map((issue) => (
                     <ListGroup key={issue.id}>
