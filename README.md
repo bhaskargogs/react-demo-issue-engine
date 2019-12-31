@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  ```
  git clone https://github.com/bhaskargogs/react-demo-issue-engine.git
  ```
-2. Install dependecies:
+2. Install dependencies:
 ```
 yarn install
 ```
