@@ -2,14 +2,21 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Installation
+## Instructions
 
-After you clone the prjecct, use `yarn install` to install dependencies
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone the project using the command:
+ ```
+ git clone https://github.com/bhaskargogs/react-demo-issue-engine.git
+ ```
+2. Install dependecies:
+```
+yarn install
+```
+3. Runs the app in the development mode.
+```
+yarn start
+```
+4. Use [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Description
 
